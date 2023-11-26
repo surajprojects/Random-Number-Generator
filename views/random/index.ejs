@@ -1,0 +1,36 @@
+<% layout("layouts/boilerplate") %>
+    <div class="container text-center">
+        <div class="col">
+            <h1 class="display-1 my-3">Random Number Generator!</h1>
+
+            <h2 class="display-2 my-5" id="presentNum">
+                <%= range1 %>
+            </h2>
+
+            <button class="btn btn-success btn-lg" id="generate">Generate New</button>
+        </div>
+    </div>
+
+    <script>
+        function randomNumber(start, end) {
+            if (start > end) {
+                const range = start - end;
+                return Math.floor(Math.random() * (range + 1)) + end;
+            }
+            else {
+                const range = end - start;
+                return Math.floor(Math.random() * (range + 1)) + start;
+            }
+
+        };
+
+        const range1 = <%= range1 %>;
+        const range2 =  <%= range2 %>;
+        const generate = document.querySelector("#generate");
+        const presentNum = document.querySelector("#presentNum")
+
+        generate.addEventListener("click", () => {
+            presentNum.textContent = randomNumber(range1, range2)
+        });
+
+    </script>
