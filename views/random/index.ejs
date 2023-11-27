@@ -4,7 +4,7 @@
             <h1 class="display-1 mt-3">Random Number Generator!</h1>
 
             <h2 class="display-2 " id="presentNum">
-                <%= range1 %>
+                <%= range[0] %>
             </h2>
 
             <button class="btn btn-success btn-lg mt-5" id="generate">Generate New</button>
@@ -24,8 +24,8 @@
 
         };
 
-        const range1 = <%= range1 %>;
-        const range2 =  <%= range2 %>;
+        const range1 = <%= range[0] %>;
+        const range2 =  <%= range[1] %>;
         const generate = document.querySelector("#generate");
         const presentNum = document.querySelector("#presentNum")
 
