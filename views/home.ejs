@@ -2,17 +2,17 @@
   
     <form action="/" method="POST">
         <div class="container text-center">
-            <div class="col">
-                <h1 class="display-1 my-3">Enter Number Range!</h1>
-                <div class="display-6 my-5">
-                    <label for="range1">Enter your starting number: </label>
-                    <input type="number" name="range1" id="range1">
-                </div>
-                <div class="display-6 my-5">
-                    <label for="range2">Enter your last number: </label>
-                    <input type="number" name="range2" id="range2">
-                </div>
-                <button class="btn btn-success btn-lg">Generate</button>
+            <div class="col-8 offset-2">
+                <h1 class="display-1 mt-5">Enter Number Range!</h1>
+                <div class="form-floating my-5">
+                    <input type="number" class="form-control" id="range1" name="range1" placeholder="Enter your starting number">
+                    <label for="range1">Enter your starting number</label>
+                  </div>
+                  <div class="form-floating my-5">
+                    <input type="number" class="form-control" id="range2" name="range2" placeholder="Enter your last number">
+                    <label for="range2">Enter your last number</label>
+                  </div>
+                  <button class="btn btn-success btn-lg">Generate</button>
             </div>
         </div>
     </form>

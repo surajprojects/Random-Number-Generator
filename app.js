@@ -20,16 +20,16 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.post("/", (req, res) => {
+app.post("/", catchAsync((req, res) => {
     const { range1, range2 } = req.body;
     res.redirect(`/random?range1=${range1}&range2=${range2}`);
-});
+}));
 
-app.get("/random", (req, res) => {
+app.get("/random", catchAsync((req, res) => {
     const range1 = req.query.range1 > 0 ? req.query.range1 : 0;
     const range2 = req.query.range2 >= 1 ? req.query.range2 : 10;
     res.render("random", { range1, range2 });
-});
+}));
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page Not Found!", 404));
