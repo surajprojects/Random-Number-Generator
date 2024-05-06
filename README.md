@@ -33,7 +33,7 @@ This web app can be easily deployed using platforms like Heroku, Netlify, or Ver
 ## Security Considerations
 
 - Ensure that sensitive information, such as API keys or credentials, is handled securely and not exposed in public repositories.
-- Implement appropriate input validation and sanitization to prevent security vulnerabilities.
+- Regularly update dependencies to mitigate security vulnerabilities.
 
 ## License
 
